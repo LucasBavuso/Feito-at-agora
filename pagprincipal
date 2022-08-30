@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="princss.css">
+    <script type="text/javascript">
+        function abrir() {
+            document.getElementById('popuplog').style.display = 'block';
+            document.getElementById('popupcad').style.display = 'block';
+            document.getElementById('popupcad2').style.display = 'block';
+        }
+        function fechar() {
+            document.getElementById('popuplog').style.display = 'none';
+            document.getElementById('popupcad').style.display = 'none';
+            document.getElementById('popupcad2').style.display = 'none';
+        }
+    </script>
+</head>
+
+<body style="margin: 0;">
+    <div style="background-color: #1c110a; height: 120px; margin: 0;">
+        <a href=".../tcc22/princ.html"><img src="logore.png" alt="logo"
+                style="width:220px; height:220px; position: absolute; top: -57px; left: -30px;position: fixed;">
+        </a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="background-color: #31e0d8;">
+            <h1 style="text-align: center;">BEM-VINDOS A CAPTUART</h1>
+        </div>
+    </div>
+    <div id="divBusca" style="top: 40px; left: 32%;">
+        <input type="text" id="txtBusca" placeholder="Buscar..." />
+        <img src="lupare.png" id="btnBusca" alt="Buscar" style="width: 40px; height: 40px; position:absolute;
+         top: 40px;right: 706px; background-color: #e9b44c;position: fixed;" />
+    </div>
+    <div>
+        <img src="carrinho0.png" alt=""
+            style="height: 90px; width: 150px; position: absolute; top: 13px; right: 230px;position: fixed;">
+    </div>
+    <div>
+        <img src="mais.png" alt=""
+            style="position: absolute; height: 100px; width: 150px; top: 13px; right: 380px;position: fixed;">
+    </div>
+    <div class="posi" style=" right: 100px; ">
+        <button id="bentrar" onclick="document.getElementById('popuplog').style.display = 'block';"
+            style="height: 35px; background-color: #e9b44c;position: fixed;">ENTRAR</button>
+    </div>
+    <div id="popuplog" class="popuplog">
+        <form action="">
+            <h1>Entrar</h1>
+            <br>
+            <input type="text" value="E-mail" class="inputs"
+                onfocus="javascript:(this.value=='E-mail'?this.value = '':null);"
+                onblur="javascript:(this.value==''?this.value = 'E-mail':null);" />
+            <br>
+            <br>
+            <input type="text" value="Senha" class="inputs"
+                onfocus="javascript:(this.value=='Senha'?this.value = '':null);"
+                onblur="javascript:(this.value==''?this.value = 'Senha':null);" />
+            <br>
+            <br>
+            <br>
+            <a href="file:///C:/Users/Pichau/Downloads/TCC/tcc22/princ.html">
+                <button class="buttonpopup" style="right: 798px;position: fixed;">Entrar</button>
+            </a>
+            <button class="buttonpopup"
+                onclick="document.getElementById('popuplog').style.display = 'none';">Cancelar</button>
+        </form>
+    </div>
+    <div class="posi" style="right: 200px; ">
+        <button id="bcadastro" onclick="document.getElementById('popupcad').style.display = 'block';"
+            style="height: 35px; background-color: #e9b44c;position: fixed;">CADASTRAR</button>
+    </div>
+    <div id="popupcad" class="popupcad">
+        <form action="exibir.php" method="post">
+            <label for="txtTitulo" style="font-size: 40px;">Cadastre-se</label>
+            <br>
+            <br>
+            <input type="text" class="inputs" autofocus placeholder="Nome" required />
+            <br>
+            <br>
+            <input type="text" class="inputs" autofocus placeholder="Sobrenome" required />
+            <br>
+            <br>
+            <input type="email" class="inputs" autofocus placeholder="E-mail" required />
+            <br>
+            <br>
+            <input type="password" class="inputs" autofocus placeholder="Senha" required />
+            <br>
+            <br>
+            <label for="data"> Data de nascimento: </label>
+            <input type="date" name="dtn" class="inputs">
+            <br>
+            <br>
+            <button class="buttonpopup"
+                onclick="document.getElementById('popupcad').style.display = 'none';">Cancelar</button>
+            <br>
+            <br>
+            <button onclick="" class="buttonpopup" style="float: right; left: 77%;">Cadastrar</button>
+            
+            <button id="bentrar" onclick="document.getElementById('popupcad2').style.display = 'block';"
+            onclick="document.getElementById('popupcad').style.display = 'none';"
+                class="buttonpopup">Cadastrar como microempresário</button>
+        </form>
+    </div>
+    <div id="popupcad2" class="popupcad2">
+        <form action="exibir.php" method="post">
+                <label for="txtTitulo" style="font-size: 30px;" class="inputs">Crie o perfil da microempresa</label>
+                <br>
+                <br>
+                <input type="text" class="inputs" autofocus placeholder="Nome da empresa" required />
+                <br>
+                <br>
+                <input type="radio" name="radioid" value="C1">CPF
+                <input type="radio" name="radioid" value="C2">CNPJ
+                <br>
+                <input type="text" class="inputs" autofocus placeholder="CPF/CNPJ" required />
+                <br>
+                <br>
+                <input type="text" class="inputs" placeholder="Telefone" required />
+                <br>
+                <br>
+                <input type="text" class="inputs" placeholder="Chave pix" />
+                <br>
+                <br>
+                <input type="text" class="inputs" placeholder="Transportadora" required />
+                <br>
+                <br>
+                <label for="data"> Selecione o estado de localização: </label>
+                    <select name="estados" required>
+                        <option value="Acre">AC</option>
+                        <option value="Alagoas">AL</option>
+                        <option value="Amazonas">AM</option>
+                        <option value="Amapá">AP</option>
+                        <option value="Bahia">BA</option>
+                        <option value="Ceará">CE</option>
+                        <option value="Distrito Federal">DF</option>
+                        <option value="Espírito Santo">ES</option>
+                        <option value="Goiás">GO</option>
+                        <option value="Maranhão">MA</option>
+                        <option value="Mato Grosso">MT</option>
+                        <option value="Mato Grosso do Sul">MS</option>
+                        <option value="Minas Gerais">MG</option>
+                        <option value="Pará">PA</option>
+                        <option value="Paraíba">PB</option>
+                        <option value="Paraná">PR</option>
+                        <option value="Pernambuco">PE</option>
+                        <option value="Piauí">PI</option>
+                        <option value="Rio de Janeiro">RJ</option>
+                        <option value="Rio Grande do Norte">RN</option>
+                        <option value="Rio Grande do Sul">RS</option>
+                        <option value="Rondônia">RO</option>
+                        <option value="Roraima">RR</option>
+                        <option value="Santa Catarina">SC</option>
+                        <option value="São Paulo">SP</option>
+                        <option value="Sergipe">SE</option>
+                        <option value="Tocantins">TO</option>
+                       </select>
+                    <br>
+                    <br>
+                    <input type="text" class="inputs" autofocus placeholder="Nome da rua" required />
+                    <br>
+                    
+                    <label for="data"> Tipo de residência: </label>
+                    <input type="radio" name="radiord" value="r1">Casa
+                    <input type="radio" name="radiord" value="r2">Apartamento
+                    <br>
+                    <br>
+                    <input type="text" class="inputs" autofocus placeholder="Número da residência" required />
+                    <br><br>
+                <button onclick="" style="float: right; left: 82%;" class="buttonpopup">Criar</button>
+                <button class="buttonpopup"
+                onclick="document.getElementById('popupcad2').style.display = 'none';">Cancelar</button>
+        </form>
+    </div>
+</body>
+
+</html>
